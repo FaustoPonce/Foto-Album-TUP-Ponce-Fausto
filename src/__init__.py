@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 from .config import Config
 
 db : SQLAlchemy = SQLAlchemy()
-migrate : Migrate = Migrate
+migrate : Migrate = Migrate()
 
 def crear_app() -> Flask:
     app = Flask(__name__)

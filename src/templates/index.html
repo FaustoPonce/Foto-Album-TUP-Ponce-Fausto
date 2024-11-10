@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <h1>Portal de Fotos</h1>
@@ -6,7 +6,7 @@
 
 <div id="modal"></div>
 
-<div id="user-list">
+<div id="photo-list">
     {% for photo in photos %}
         {% include "photo_item.html" %}
     {% endfor %}
