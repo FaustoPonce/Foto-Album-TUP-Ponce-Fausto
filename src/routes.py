@@ -51,8 +51,10 @@ def delete_photo(photo_id: int) -> str:
     db.session.commit()
     
     photos: list[Tuple[Any]] = Photo.query.all()
-
+    
     return redirect(url_for('photo_bp.index', photos=photos))
+
+    
 
 @photo_bp.route("/photos/<int:photo_id>", methods=['GET', 'POST'])
 def update_photo(photo_id: int) -> str:
